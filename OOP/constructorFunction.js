@@ -1,15 +1,17 @@
- function BankAccount(customerName,balance = 0){
-    this.customerName = customerName;
-    this.accountNumber = Date.now();
-    this.balance = balance;
+ class BankAccount {
+    constructor(customerName, balance = 0) {
+        this.customerName = customerName;
+        this.accountNumber = Date.now();
+        this.balance = balance;
 
-    this.deposit = (amount) =>{
-        this.balance += amount;
+        this.deposit = (amount) => {
+            this.balance += amount;
+        };
+        this.withdraw = (amount) => {
+            this.balance -= amount;
+        };
     }
-    this.withdraw = (amount) =>{
-        this.balance -= amount;
-    }
- }
+}
 
  const rakeshAccount = new BankAccount("Rakesh",1000);
  rakeshAccount.withdraw(500);

@@ -14,8 +14,8 @@ let person4 = {
     name: "Kumar",
     age: 25
 }
-let  showdeatils2 = function([city,car]){
+let  showdeatils2 = function(city,car){
     console.log(`${this.name} is ${this.age} year's old and lives in ${city} and drives the ${car}`);
 }
-let showDetailsBind = showdeatils2.bind(person4, ["lucknow", "BMW"]);
+let showDetailsBind = showdeatils2.bind(person4, "lucknow", "BMW");
 showDetailsBind();

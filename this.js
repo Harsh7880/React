@@ -26,13 +26,16 @@ const student1 = {
         console.log(this.name); // in this case output will be calling object which is student 1
     }
 }
+const printMName = function(){
+    console.log(this.name); // in this case output will be calling object which is student 1
+}
 student1.printMName();
 
 // call apply bind method (sharing method)
 const stu = {
     name: "vashu"
 }
-student1.printMName.call(stu) // the value of this can we modified / overrite by stu object.
+printMName.call(stu) // the value of this can we modified / overrite by stu object.
 
 
 // this inside arrow function's

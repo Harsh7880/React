@@ -13,7 +13,7 @@ let person4 = {
     name: "Kumar",
     age: 25
 }
-let  showdeatils2 = function([city,car]){
+let  showdeatils2 = function(city,car){
     console.log(`${this.name} is ${this.age} year's old and lives in ${city} and drives the ${car}`);
 }
 showdeatils2.apply(person4, ["lucknow", "BMW"]);

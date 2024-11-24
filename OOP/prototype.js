@@ -11,7 +11,7 @@
  * Prototype chaining: Prototype chaining is the mechanism through which objects in JavaScript inherit 
  * properties and methods from their prototypes. Each object has a reference to its prototype, 
  * and this forms a chain of objects linked through their prototypes. When you access a property or
- *  method on an object, JavaScript looks for it in the object itself, and if not found, it follows 
+ * method on an object, JavaScript looks for it in the object itself, and if not found, it follows 
  * the prototype chain to find it in the object's prototype, and so on until it reaches the end of the chain.
  * 
  */
@@ -40,3 +40,4 @@ let object2 = {
 }
 
 object2.__proto__ = object; 
+object2.getIntro();

@@ -1,5 +1,5 @@
 class BankAccoumnt{
-     customerName;
+     #customerName;
      accountNumber = Date.now();
      balance = 0;
 

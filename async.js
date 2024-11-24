@@ -24,7 +24,7 @@ const newPromise2 = new Promise((resolve,reject) =>{
 });
 // always returns a promise
 function getData(){
-    newPromise.then((res) =>{
+    newPromise1.then((res) =>{
         console.log(res);
     });    
     console.log("Hellow World");
@@ -44,10 +44,7 @@ async function handlePromise(){
 
     const value = await newPromise1;
     console.log("Hello World 1");
-    console.log(value);
-
-    
-    
+    console.log("value----", value);   
 }
 handlePromise();
 
