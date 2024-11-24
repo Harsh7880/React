@@ -18,7 +18,7 @@ const minValue = (arr) => {
 }
 
 // Calling the minValue function and logging the result
-console.log(minValue(arr));  // Output: 0 (the minimum value in the array)
+// console.log(minValue(arr));  // Output: 0 (the minimum value in the array)
 
 // Another Array for demonstration
 const array = [1, 2, 3, 4, 5, 6];
@@ -40,7 +40,7 @@ for (let i = 1; i < array.length; i++) {
 }
 
 // Log the final max and min values
-console.log(`Max: ${max}, Min: ${min}`);  // Output: Max: 6, Min: 1
+// console.log(`Max: ${max}, Min: ${min}`);  // Output: Max: 6, Min: 1
 
 
 // ------------------- Time and Space Complexity -------------------
@@ -58,3 +58,30 @@ console.log(`Max: ${max}, Min: ${min}`);  // Output: Max: 6, Min: 1
 // Space Complexity: O(1)
 // - Constant space is used to store the max and min values, no extra space for data structures.
 
+
+
+
+// Function to find the second largest element
+let maxEle = -Infinity;  // Initialize the largest element as negative infinity
+let secondLargest = -Infinity;  // Initialize the second largest element as negative infinity
+
+// Loop through the array
+for (let i = 0; i < arr.length; i++) {
+    // If the current element is greater than maxEle, it becomes the largest element
+    if (arr[i] > maxEle) {
+        secondLargest = maxEle;  // The old largest element becomes the second largest
+        maxEle = arr[i];  // Update maxEle to the current element
+    }
+    // If the current element is less than maxEle but greater than secondLargest, it becomes the second largest
+    else if (arr[i] < maxEle && arr[i] > secondLargest) {
+        secondLargest = arr[i];  // Update secondLargest
+    }
+}
+
+console.log(secondLargest);  // Output the second largest element
+
+// Time Complexity:
+// - **O(n)**: We only loop through the array once, where 'n' is the length of the array.
+
+// Space Complexity:
+// - **O(1)**: We are only using a constant amount of extra space (maxEle and secondLargest), no extra data structures are used.
